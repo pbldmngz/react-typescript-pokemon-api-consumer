@@ -18,15 +18,11 @@ function usePokeList() {
       )
         .then((response) => response.json())
         .then((data) => {
-          if (data.next === null) {
-            setLastPage(true);
-          }
+          setLastPage(data.next === null);
           setPokemonList({ ...pokemonList, [offset]: data.results });
         });
     }
   }, [offset]);
-
-  console.log(pokemonList);
 
   const handleNext = () => {
     setOffset((prevOffset) => prevOffset + 1);
@@ -38,7 +34,14 @@ function usePokeList() {
     }
   };
 
-  return { handleNext, handlePrevious, offset, lastPage, pokemonList };
+  return {
+    handleNext,
+    handlePrevious,
+    offset,
+    setOffset,
+    lastPage,
+    pokemonList,
+  };
 }
 
 export default usePokeList;

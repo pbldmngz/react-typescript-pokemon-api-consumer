@@ -4,22 +4,27 @@ import PokeListItem from "src/components/PokeList/PokeListItem/PokeListItem";
 import "src/components/PokeList/PokeList.scss";
 
 function PokeList() {
-  const { handleNext, handlePrevious, offset, lastPage, pokemonList } =
-    usePokeList();
-  console.log("displaying offset", offset, pokemonList[offset]);
+  const {
+    handleNext,
+    handlePrevious,
+    offset,
+    setOffset,
+    lastPage,
+    pokemonList,
+  } = usePokeList();
 
   if (!pokemonList[offset]) return <p>Loading...</p>;
 
   return (
     <div className="view">
-      <div className="pokemon-list-container">
+      <div>
         <div className="pokemon-list">
           {pokemonList[offset].map((pokemon) => {
             return <PokeListItem {...pokemon} key={pokemon.name} />;
           })}
         </div>
         <PokeListButtons
-          {...{ offset, lastPage, handleNext, handlePrevious }}
+          {...{ offset, setOffset, lastPage, handleNext, handlePrevious }}
         />
       </div>
     </div>
