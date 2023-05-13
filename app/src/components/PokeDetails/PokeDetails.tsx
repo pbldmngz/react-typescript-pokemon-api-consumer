@@ -1,9 +1,8 @@
 import { useParams } from "react-router-dom";
 import { RouteParams } from "src/components/PokeDetails/PokeDetailsInterfaces.ts";
 import PokeStats from "src/components/PokeDetails/PokeStats/PokeStats";
-import usePokeDetails from "./usePokeDetails";
+import usePokeDetails from "src/components/PokeDetails/usePokeDetails";
 import "src/components/PokeDetails/PokeDetails.scss";
-import { toTitleCase } from "src/functions/TextOperations";
 
 type Props = {};
 
@@ -28,7 +27,7 @@ function PokeDetails({}: Props) {
           <PokeStats stats={pokemonDetail.stats} />
           <PokeStats stats={pokemonDetail.stats} />
         </div>
-        <footer className="poke-footer">Go back to home</footer>
+        <footer className="poke-footer">Go back to the list</footer>
       </div>
     </div>
   );
