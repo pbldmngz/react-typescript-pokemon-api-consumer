@@ -1,5 +1,6 @@
+@import "src/colors";
+
 .view {
-  //   padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,7 +12,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #374b81;
+  background-color: $background-color-secondary;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
@@ -25,7 +26,7 @@
     font-size: 2.5em;
     margin-bottom: 20px;
     color: #fff;
-    text-shadow: 2px 2px #6390f0;
+    text-shadow: 2px 2px $highlights-color;
     font-family: "Verdana", sans-serif;
     text-transform: uppercase; // Makes the title all caps
     letter-spacing: 0.1em; // Adds some space between the letters
@@ -38,7 +39,7 @@
 
     .poke-image {
       height: 400px;
-      border: 0.5rem solid #6390f0;
+      border: 0.5rem solid $highlights-color;
       border-radius: 2rem;
       border-bottom-right-radius: 0;
       border-top-right-radius: 0;
@@ -55,8 +56,8 @@
   .poke-footer {
     margin-top: 1rem;
     width: 100%;
-    background-color: #fff;
-    color: #374b81;
+    background-color: $background-color-tertiary;
+    color: $text-color-secondary;
     text-align: center;
 
     border-radius: 0 0 0.8rem 0.8rem;

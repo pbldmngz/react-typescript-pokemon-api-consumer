@@ -1,5 +1,7 @@
+@import "src/colors";
+
 .poke-stats {
-  background-color: #f8f9fa;
+  background-color: $background-color-tertiary;
 
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
