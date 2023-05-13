@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { RouteParams } from "src/components/PokeDetails/PokeDetailsInterfaces.ts";
 import PokeStats from "src/components/PokeDetails/PokeStats/PokeStats";
 import usePokeDetails from "src/components/PokeDetails/usePokeDetails";
@@ -27,7 +27,9 @@ function PokeDetails({}: Props) {
           <PokeStats stats={pokemonDetail.stats} />
           <PokeStats stats={pokemonDetail.stats} />
         </div>
-        <footer className="poke-footer">Go back to the list</footer>
+        <Link to="/home" className="poke-footer">
+          Go back to the list
+        </Link>
       </div>
     </div>
   );

@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { PokemonListItem } from "src/components/PokeList/PokeListInterfaces";
+import "src/components/PokeList/PokeListItem/PokeListItem.scss";
+import { toTitleCase } from "src/functions/TextOperations";
 
 function PokeListItem({ name, url }: PokemonListItem) {
   const [spriteUrl, setSpriteUrl] = useState("");
@@ -15,10 +18,10 @@ function PokeListItem({ name, url }: PokemonListItem) {
   }, [url]);
 
   return (
-    <div>
-      <p>{name}</p>
-      <img src={spriteUrl} alt={name} />
-    </div>
+    <Link to={`/pokemon/${name}`} className="poke-list-item">
+      {spriteUrl ? <img src={spriteUrl} /> : <div className="dummy-image" />}
+      <p>{toTitleCase(name)}</p>
+    </Link>
   );
 }
 

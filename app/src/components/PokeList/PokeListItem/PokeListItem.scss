@@ -1,0 +1,25 @@
+.poke-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+
+  p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+
+    margin: 0;
+  }
+
+  img,
+  .dummy-image {
+    height: 96px;
+    width: 96px;
+  }
+}

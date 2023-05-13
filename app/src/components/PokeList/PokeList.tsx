@@ -1,6 +1,7 @@
 import PokeListButtons from "src/components/PokeList/PokeListButtons/PokeListButtons";
 import usePokeList from "src/components/PokeList/usePokeList";
-import PokeListItem from "./PokeListItem/PokeListItem";
+import PokeListItem from "src/components/PokeList/PokeListItem/PokeListItem";
+import "src/components/PokeList/PokeList.scss";
 
 function PokeList() {
   const { handleNext, handlePrevious, offset, lastPage, pokemonList } =

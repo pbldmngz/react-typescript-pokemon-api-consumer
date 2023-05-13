@@ -7,11 +7,15 @@ function usePokeList() {
 
   const [lastPage, setLastPage] = useState(false);
 
-  const LIMIT = 20;
+  const LIMIT = 21;
 
   useEffect(() => {
     if (!pokemonList[offset]) {
-      fetch(`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${LIMIT}`)
+      fetch(
+        `https://pokeapi.co/api/v2/pokemon?offset=${
+          offset * LIMIT
+        }&limit=${LIMIT}`
+      )
         .then((response) => response.json())
         .then((data) => {
           if (data.next === null) {
