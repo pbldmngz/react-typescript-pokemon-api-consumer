@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import PokeDetails from "Components/PokeDetails/PokeDetails";
+import PokeDetails from "src/components/PokeDetails/PokeDetails";
 
 function App() {
   return (
