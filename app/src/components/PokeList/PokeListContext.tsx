@@ -1,16 +1,8 @@
 import { ReactNode, createContext, useState } from "react";
-
-// TODO: Fix this interface to avoid ugly any type
-interface PokemonContextType {
-  pokemonList: PokemonListObject;
-  setPokemonList: React.Dispatch<React.SetStateAction<PokemonListObject>>;
-  offset: number;
-  setOffset: React.Dispatch<React.SetStateAction<number>>;
-}
-
-interface PokemonListObject {
-  [key: number]: any[];
-}
+import {
+  PokemonContextType,
+  PokemonListObject,
+} from "src/components/PokeList/PokeListInterfaces";
 
 export const PokemonContext = createContext<PokemonContextType>({
   pokemonList: [],

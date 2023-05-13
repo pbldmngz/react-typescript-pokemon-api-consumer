@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { PokemonDetailProps } from "./PokeDetailsInterfaces";
+import { PokemonDetailProps } from "src/components/PokeDetails/PokeDetailsInterfaces";
 
 function usePokeDetails(name: string) {
   const [pokemonDetail, setPokemonDetail] = useState<PokemonDetailProps | null>(
