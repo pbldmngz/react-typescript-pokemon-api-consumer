@@ -17,7 +17,7 @@ function PokeList() {
           if (data.next === null) {
             setLastPage(true);
           }
-          setPokemonList([...pokemonList, data.results]);
+          setPokemonList({ ...pokemonList, [offset]: data.results });
         });
     }
   }, [offset]);
