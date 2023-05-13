@@ -7,7 +7,7 @@ function usePokeDetails(name: string) {
   );
 
   useEffect(() => {
-    fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
+    fetch(`https://pokeapi.co/api/v2/pokemon/${name.toLowerCase()}`)
       .then((response) => response.json())
       .then((data) => setPokemonDetail(data));
   }, [name]);
