@@ -3,7 +3,7 @@ import { RouteParams } from "src/components/PokeDetails/PokeDetailsInterfaces.ts
 import PokeStats from "src/components/PokeDetails/PokeStats/PokeStats";
 import usePokeDetails from "src/components/PokeDetails/usePokeDetails";
 import "src/components/PokeDetails/PokeDetails.scss";
-import PokeAbilities from "src/components/PokeDetails/PokeAbilities/PokeAbilities";
+import PokeProperties from "src/components/PokeDetails/PokeProperties/PokeProperties";
 
 type Props = {};
 
@@ -26,7 +26,14 @@ function PokeDetails({}: Props) {
             alt={name}
           />
           <PokeStats stats={pokemonDetail.stats} />
-          <PokeAbilities abilities={pokemonDetail.abilities} />
+          <PokeProperties
+            properties={pokemonDetail.abilities}
+            propertyName="ability"
+          />
+          <PokeProperties
+            properties={pokemonDetail.moves}
+            propertyName="move"
+          />
         </div>
         <Link to="/home" className="poke-footer">
           Go back to the list

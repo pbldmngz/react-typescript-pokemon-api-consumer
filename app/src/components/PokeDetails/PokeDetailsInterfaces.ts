@@ -10,6 +10,7 @@ export interface PokemonDetailProps {
   };
   stats: Stats[];
   abilities: Abilities[];
+  moves: Move[];
 }
 
 export interface RouteParams {
@@ -38,6 +39,26 @@ export interface Abilities {
 export interface FlavorTextEntries {
   flavor_text: string;
   language: {
+    name: string;
+    url: string;
+  };
+  version_group: {
+    name: string;
+    url: string;
+  };
+}
+
+export interface Move {
+  move: {
+    name: string;
+    url: string;
+  };
+  version_group_details: VersionGroupDetails[];
+}
+
+export interface VersionGroupDetails {
+  level_learned_at: number;
+  move_learn_method: {
     name: string;
     url: string;
   };
