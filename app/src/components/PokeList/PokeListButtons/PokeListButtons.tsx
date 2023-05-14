@@ -14,11 +14,11 @@ function PokeListButtons(props: PokeListButtonsProps) {
       </button>
       <input
         type="text"
-        value={Number(inputValue) + 1}
+        value={inputValue}
         onChange={handleInputChange}
         onKeyDown={handleInputKeyPress}
       />
-      <button onClick={handleNext} disabled={lastPage}>
+      <button onClick={handleNext} disabled={offset === lastPage}>
         Next
       </button>
     </div>

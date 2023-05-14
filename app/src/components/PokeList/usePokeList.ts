@@ -11,11 +11,12 @@ function usePokeList() {
     imageCache,
     setImageCache,
   } = useContext(PokemonContext);
-  const [lastPage, setLastPage] = useState(false);
+  const [lastPage, setLastPage] = useState(-1);
   const isFetching = useRef(false);
   const LIMIT = 21;
 
   const fetchData = async (pageOffset: number, isNextPage = false) => {
+    if (lastPage !== -1 && pageOffset > lastPage) return;
     if (isFetching.current) return;
     isFetching.current = true;
 
@@ -27,7 +28,7 @@ function usePokeList() {
       );
       const data = await response.json();
       isFetching.current = false;
-      setLastPage(data.next === null);
+      if (data.next === null) setLastPage(pageOffset);
       setPokemonList((prevList) => ({
         ...prevList,
         [pageOffset]: data.results,

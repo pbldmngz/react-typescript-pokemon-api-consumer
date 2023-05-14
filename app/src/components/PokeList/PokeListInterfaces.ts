@@ -29,7 +29,7 @@ export interface usePokeListReturnType {
 export interface PokeListButtonsProps {
   offset: number;
   setOffset: React.Dispatch<React.SetStateAction<number>>;
-  lastPage: boolean;
+  lastPage: number;
   handleNext: () => void;
   handlePrevious: () => void;
 }

@@ -7,7 +7,7 @@ describe("<PokeListButtons />", () => {
   it("renders the next button", () => {
     const mockProps: PokeListButtonsProps = {
       offset: 0,
-      lastPage: false,
+      lastPage: -1,
       handleNext: jest.fn(),
       handlePrevious: jest.fn(),
       setOffset: jest.fn(),
@@ -21,7 +21,7 @@ describe("<PokeListButtons />", () => {
   it("calls handleNext when next button is clicked and it;s not sitting on the last page", () => {
     const mockProps: PokeListButtonsProps = {
       offset: 0,
-      lastPage: false,
+      lastPage: -1,
       handleNext: jest.fn(),
       handlePrevious: jest.fn(),
       setOffset: jest.fn(),
@@ -35,8 +35,8 @@ describe("<PokeListButtons />", () => {
 
   it("does not call handleNext when next button is clicked and is sitting on the last page", () => {
     const mockProps: PokeListButtonsProps = {
-      offset: 0,
-      lastPage: true, // Set lastPage to true
+      offset: 61,
+      lastPage: 61, // Set lastPage to true
       handleNext: jest.fn(),
       handlePrevious: jest.fn(),
       setOffset: jest.fn(),
@@ -51,7 +51,7 @@ describe("<PokeListButtons />", () => {
   it("calls handlePrevious when previous button is clicked and not sitting on the first page", () => {
     const mockProps: PokeListButtonsProps = {
       offset: 10, // Replace with the desired offset value
-      lastPage: false,
+      lastPage: -1,
       handleNext: jest.fn(),
       handlePrevious: jest.fn(),
       setOffset: jest.fn(),
@@ -66,7 +66,7 @@ describe("<PokeListButtons />", () => {
   it("does not call handlePrevious if sitting on the first page", () => {
     const mockProps: PokeListButtonsProps = {
       offset: 0,
-      lastPage: false,
+      lastPage: -1,
       handleNext: jest.fn(),
       handlePrevious: jest.fn(),
       setOffset: jest.fn(),
