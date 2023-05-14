@@ -11,6 +11,7 @@ export interface PokemonDetailProps {
   stats: Stats[];
   abilities: Abilities[];
   moves: Move[];
+  types: Types[];
 }
 
 export interface RouteParams {
@@ -63,6 +64,14 @@ export interface VersionGroupDetails {
     url: string;
   };
   version_group: {
+    name: string;
+    url: string;
+  };
+}
+
+export interface Types {
+  slot: number;
+  type: {
     name: string;
     url: string;
   };

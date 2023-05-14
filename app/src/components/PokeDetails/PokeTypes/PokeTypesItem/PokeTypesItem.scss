@@ -1,0 +1,86 @@
+@import "src/components/PokeDetails/PokeTypes/PokemonTypesColors.scss";
+
+.sphere {
+  //   border-radius: 50%;
+  border-radius: 1rem;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  width: 2.5vw;
+  height: 2.5vw;
+}
+
+.normal {
+  background-color: $normal;
+}
+.fire {
+  background-color: $fire;
+}
+.water {
+  background-color: $water;
+}
+
+.electric {
+  background-color: $electric;
+}
+
+.grass {
+  background-color: $grass;
+}
+
+.ice {
+  background-color: $ice;
+}
+
+.rock {
+  background-color: $rock;
+}
+
+.ground {
+  background-color: $ground;
+}
+
+.poison {
+  background-color: $poison;
+}
+
+.flying {
+  background-color: $flying;
+}
+
+.psychic {
+  background-color: $psychic;
+}
+
+.bug {
+  background-color: $bug;
+}
+
+.ghost {
+  background-color: $ghost;
+}
+
+.dark {
+  background-color: $dark;
+}
+
+.steel {
+  background-color: $steel;
+}
+
+.dragon {
+  background-color: $dragon;
+}
+
+.fairy {
+  background-color: $fairy;
+}
+
+.fighting {
+  background-color: $fighting;
+}
+.active {
+  opacity: 1;
+}
+.inactive {
+  opacity: 0.25;
+}

@@ -14,7 +14,7 @@ function PokeList() {
   } = usePokeList();
 
   return (
-    <div className="view">
+    <div className="view background-pattern">
       <div>
         <div className="pokemon-list">
           {!pokemonList[offset] ? (
