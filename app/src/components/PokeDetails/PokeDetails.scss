@@ -19,7 +19,7 @@
     font-size: 2.5em;
     margin-bottom: 20px;
     color: $background-color-secondary;
-    text-shadow: 2px 2px $background-color-primary;
+    // text-shadow: 2px 2px $background-color-primary; // Looks W E I R D, so I'll check later if it's worth it
     font-family: "Verdana", sans-serif;
     text-transform: uppercase; // Makes the title all caps
     letter-spacing: 3rem; // Adds some space between the letters
@@ -32,22 +32,19 @@
 
   .poke-details-content {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     width: 100%;
+    height: calc(100% - 9rem);
 
     .poke-image {
-      height: 22rem;
+      height: calc(100% - 3rem);
       border: 0.5rem solid $background-color-tertiary;
       border-radius: 2rem;
       border-bottom-right-radius: 0;
       border-top-right-radius: 0;
 
       padding: 1rem;
-      margin-right: 0.5rem;
-    }
-
-    :last-child {
-      margin-left: auto;
+      margin-right: 1.25rem;
     }
   }
 
@@ -59,9 +56,5 @@
     text-align: center;
 
     border-radius: 0 0 0.8rem 0.8rem;
-  }
-
-  :last-child {
-    margin-top: auto;
   }
 }
