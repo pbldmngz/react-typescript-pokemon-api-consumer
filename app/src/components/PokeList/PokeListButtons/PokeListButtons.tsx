@@ -1,6 +1,6 @@
 import "src/components/PokeList/PokeListButtons/PokeListButtons.scss";
-import { PokeListButtonsProps } from "src/components/PokeList/PokeListInterfaces";
-import usePokeListButtons from "src/components/PokeList/PokeListButtons/usePokeListButtons";
+import { PokeListButtonsProps } from "src/interfaces/PokeListInterfaces";
+import usePokeListButtons from "src/hooks/usePokeListButtons";
 
 function PokeListButtons(props: PokeListButtonsProps) {
   const { offset, lastPage, handleNext, handlePrevious } = props;

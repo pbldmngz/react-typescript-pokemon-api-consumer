@@ -1,7 +1,7 @@
 import { render, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import PokeListButtons from "src/components/PokeList/PokeListButtons/PokeListButtons";
-import { PokeListButtonsProps } from "src/components/PokeList/PokeListInterfaces";
+import { PokeListButtonsProps } from "src/interfaces/PokeListInterfaces";
 
 describe("<PokeListButtons />", () => {
   it("renders the next button", () => {

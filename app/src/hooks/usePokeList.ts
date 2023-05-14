@@ -1,6 +1,6 @@
 import { useContext, useEffect, useRef, useState } from "react";
-import { PokemonContext } from "src/components/PokeList/PokeListContext";
-import { PokemonListItem } from "src/components/PokeList/PokeListInterfaces";
+import { PokemonContext } from "src/components/PokeList/PokeListContext/PokeListContext";
+import { PokemonListItem } from "src/interfaces/PokeListInterfaces";
 
 function usePokeList() {
   const {

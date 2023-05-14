@@ -2,7 +2,7 @@ import { ReactNode, createContext, useState } from "react";
 import {
   PokemonContextType,
   PokemonListObject,
-} from "src/components/PokeList/PokeListInterfaces";
+} from "src/interfaces/PokeListInterfaces";
 
 export const PokemonContext = createContext<PokemonContextType>({
   pokemonList: [],

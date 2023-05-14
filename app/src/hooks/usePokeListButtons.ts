@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { PokeListButtonsProps } from "src/components/PokeList/PokeListInterfaces";
+import { PokeListButtonsProps } from "src/interfaces/PokeListInterfaces";
 
 function usePokeListButtons({ offset, setOffset }: PokeListButtonsProps) {
   const [inputValue, setInputValue] = useState(offset.toString());

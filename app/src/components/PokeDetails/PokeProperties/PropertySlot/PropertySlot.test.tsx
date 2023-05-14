@@ -1,5 +1,5 @@
 import { render, waitFor } from "@testing-library/react";
-import PropertySlot from "src/components/PokeDetails/PokeProperties/PropertySlot";
+import PropertySlot from "src/components/PokeDetails/PokeProperties/PropertySlot/PropertySlot";
 import "@testing-library/jest-dom/extend-expect";
 
 describe("<PropertySlot />", () => {

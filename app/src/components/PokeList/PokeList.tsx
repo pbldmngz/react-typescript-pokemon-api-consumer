@@ -1,5 +1,5 @@
 import PokeListButtons from "src/components/PokeList/PokeListButtons/PokeListButtons";
-import usePokeList from "src/components/PokeList/usePokeList";
+import usePokeList from "src/hooks/usePokeList";
 import PokeListItem from "src/components/PokeList/PokeListItem/PokeListItem";
 import "src/components/PokeList/PokeList.scss";
 

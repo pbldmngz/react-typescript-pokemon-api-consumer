@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom";
-import { RouteParams } from "src/components/PokeDetails/PokeDetailsInterfaces.ts";
+import { RouteParams } from "src/interfaces/PokeDetailsInterfaces";
 import PokeStats from "src/components/PokeDetails/PokeStats/PokeStats";
-import usePokeDetails from "src/components/PokeDetails/usePokeDetails";
+import usePokeDetails from "src/hooks/usePokeDetails";
 import "src/components/PokeDetails/PokeDetails.scss";
 import PokeProperties from "src/components/PokeDetails/PokeProperties/PokeProperties";
 
@@ -12,7 +12,11 @@ function PokeDetails({}: Props) {
   const [pokemonDetail] = usePokeDetails(name);
 
   if (!pokemonDetail) {
-    return <div>Loading...</div>;
+    return (
+      <div className="loading" data-testid="loading-element">
+        <div className="lds-dual-ring" />
+      </div>
+    );
   }
 
   return (

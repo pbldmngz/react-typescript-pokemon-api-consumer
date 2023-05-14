@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import { PokemonListItem } from "src/components/PokeList/PokeListInterfaces";
-import { PokemonContext } from "src/components/PokeList/PokeListContext";
+import { PokemonListItem } from "src/interfaces/PokeListInterfaces";
+import { PokemonContext } from "src/components/PokeList/PokeListContext/PokeListContext";
 import "src/components/PokeList/PokeListItem/PokeListItem.scss";
 import { toTitleCase } from "src/functions/TextOperations";
 

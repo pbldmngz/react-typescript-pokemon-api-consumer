@@ -1,5 +1,5 @@
 import "src/components/PokeDetails/PokeProperties/PokeProperties.scss";
-import PropertySlot from "src/components/PokeDetails/PokeProperties/PropertySlot";
+import PropertySlot from "src/components/PokeDetails/PokeProperties/PropertySlot/PropertySlot";
 
 type Props = { properties: any[]; propertyName: string };
 

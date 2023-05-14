@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { toTitleCase } from "src/functions/TextOperations";
-import { FlavorTextEntries } from "src/components/PokeDetails/PokeDetailsInterfaces.ts";
+import { FlavorTextEntries } from "src/interfaces/PokeDetailsInterfaces";
 import "src/components/PokeDetails/PokeProperties/PokeProperties.scss";
 
 type Props = { name: string; url: string };

@@ -1,4 +1,4 @@
-import { Stats } from "src/components/PokeDetails/PokeDetailsInterfaces";
+import { Stats } from "src/interfaces/PokeDetailsInterfaces";
 import "src/components/PokeDetails/PokeStats/PokeStats.scss";
 import { toTitleCase } from "src/functions/TextOperations";
 
