@@ -9,8 +9,11 @@ function PokeStats({ stats }: Props) {
     <div className="poke-stats">
       {stats.map((stat) => {
         return (
-          <p key={stat.stat.name}>
-            {toTitleCase(stat.stat.name)}: {stat.base_stat}
+          <p key={stat.stat.name} data-testid="poke-stat">
+            <span data-testid="poke-stat-name">
+              {toTitleCase(stat.stat.name)}
+            </span>
+            : <span data-testid="poke-stat-value">{stat.base_stat}</span>
           </p>
         );
       })}

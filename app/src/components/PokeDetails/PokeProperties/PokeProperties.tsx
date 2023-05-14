@@ -8,7 +8,7 @@ function PokeProperties({ properties, propertyName }: Props) {
     <div className="property-container">
       {properties.map((property, index) => {
         return (
-          <div className="property-row" key={index}>
+          <div className="property-row" key={index} data-testid="property-row">
             <p className="slot">{index + 1}</p>
             <PropertySlot
               {...property[propertyName]}

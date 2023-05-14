@@ -20,10 +20,10 @@ export interface RouteParams {
 
 export interface Stats {
   base_stat: number;
-  effort: number;
+  effort?: number;
   stat: {
     name: string;
-    url: string;
+    url?: string;
   };
 }
 
