@@ -18,7 +18,7 @@ function PokeList() {
       <div>
         <div className="pokemon-list">
           {!pokemonList[offset] ? (
-            <div className="loading">
+            <div className="loading" data-testid="loading-element">
               <div className="lds-dual-ring" />
             </div>
           ) : (
