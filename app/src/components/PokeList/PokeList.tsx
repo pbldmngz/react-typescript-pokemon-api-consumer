@@ -13,15 +13,19 @@ function PokeList() {
     pokemonList,
   } = usePokeList();
 
-  if (!pokemonList[offset]) return <p>Loading...</p>;
-
   return (
     <div className="view">
       <div>
         <div className="pokemon-list">
-          {pokemonList[offset].map((pokemon) => {
-            return <PokeListItem {...pokemon} key={pokemon.name} />;
-          })}
+          {!pokemonList[offset] ? (
+            <div className="loading">
+              <div className="lds-dual-ring" />
+            </div>
+          ) : (
+            pokemonList[offset].map((pokemon) => {
+              return <PokeListItem {...pokemon} key={pokemon.name} />;
+            })
+          )}
         </div>
         <PokeListButtons
           {...{ offset, setOffset, lastPage, handleNext, handlePrevious }}
