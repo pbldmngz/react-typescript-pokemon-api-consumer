@@ -3,6 +3,7 @@ import { RouteParams } from "src/components/PokeDetails/PokeDetailsInterfaces.ts
 import PokeStats from "src/components/PokeDetails/PokeStats/PokeStats";
 import usePokeDetails from "src/components/PokeDetails/usePokeDetails";
 import "src/components/PokeDetails/PokeDetails.scss";
+import PokeAbilities from "src/components/PokeDetails/PokeAbilities/PokeAbilities";
 
 type Props = {};
 
@@ -21,11 +22,11 @@ function PokeDetails({}: Props) {
         <div className="poke-details-content">
           <img
             className="poke-image"
-            src={pokemonDetail.sprites.other.dream_world.front_default}
+            src={pokemonDetail.sprites.other["official-artwork"].front_default}
             alt={name}
           />
           <PokeStats stats={pokemonDetail.stats} />
-          <PokeStats stats={pokemonDetail.stats} />
+          <PokeAbilities abilities={pokemonDetail.abilities} />
         </div>
         <Link to="/home" className="poke-footer">
           Go back to the list

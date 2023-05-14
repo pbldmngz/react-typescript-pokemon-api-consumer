@@ -1,0 +1,53 @@
+@import "src/colors";
+
+.ability-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.235rem;
+
+  .ability-row {
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    height: 1.5rem;
+    width: 15rem;
+
+    .slot {
+      background-color: $highlights-color;
+      height: 1.5rem;
+      width: 1.5rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+  }
+
+  .ability-slot {
+    background-color: #fff;
+    width: 100%;
+    padding-left: 0.5rem;
+    border-top-right-radius: 1rem;
+
+    .ability-name {
+      font-size: 1rem;
+      font-weight: bold;
+      color: $text-color-tertiary;
+      margin: 0;
+    }
+
+    .ability-effect {
+      font-size: 0.8rem;
+      color: $text-color-secondary;
+      margin: 0;
+      margin-bottom: 0.5rem;
+      margin-right: 0.5rem;
+    }
+  }
+}
