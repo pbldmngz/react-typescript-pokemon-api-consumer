@@ -1,6 +1,10 @@
 export interface PokemonContextType {
   pokemonList: PokemonListObject;
+  imageCache: { [url: string]: HTMLImageElement };
   setPokemonList: React.Dispatch<React.SetStateAction<PokemonListObject>>;
+  setImageCache: React.Dispatch<
+    React.SetStateAction<{ [url: string]: HTMLImageElement }>
+  >;
   offset: number;
   setOffset: React.Dispatch<React.SetStateAction<number>>;
 }
