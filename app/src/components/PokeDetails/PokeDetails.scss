@@ -18,8 +18,8 @@
     text-align: center;
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: $text-color-secondary;
-    text-shadow: 2px 2px $highlights-color;
+    color: $background-color-secondary;
+    text-shadow: 2px 2px $background-color-primary;
     font-family: "Verdana", sans-serif;
     text-transform: uppercase; // Makes the title all caps
     letter-spacing: 3rem; // Adds some space between the letters
@@ -37,7 +37,7 @@
 
     .poke-image {
       height: 22rem;
-      border: 0.5rem solid $highlights-color;
+      border: 0.5rem solid $background-color-tertiary;
       border-radius: 2rem;
       border-bottom-right-radius: 0;
       border-top-right-radius: 0;
