@@ -14,7 +14,7 @@ function PokeListButtons(props: PokeListButtonsProps) {
       </button>
       <input
         type="text"
-        value={inputValue}
+        value={Number(inputValue) + 1}
         onChange={handleInputChange}
         onKeyDown={handleInputKeyPress}
       />

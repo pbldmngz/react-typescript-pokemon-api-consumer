@@ -5,7 +5,8 @@ function usePokeListButtons({ offset, setOffset }: PokeListButtonsProps) {
   const [inputValue, setInputValue] = useState(offset.toString());
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(event.target.value);
+    const newOffset = Number(event.target.value);
+    setInputValue(newOffset - 1 + "");
   };
 
   const handleInputKeyPress = (
