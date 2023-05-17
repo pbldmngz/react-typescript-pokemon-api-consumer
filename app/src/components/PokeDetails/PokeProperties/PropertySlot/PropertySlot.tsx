@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { toTitleCase } from "src/functions/TextOperations";
-import { FlavorTextEntries } from "src/interfaces/PokeDetailsInterfaces";
+import { FlavorTextEntry } from "src/interfaces/PokeDetailsInterfaces";
 import "src/components/PokeDetails/PokeProperties/PokeProperties.scss";
 
 type Props = { name: string; url: string };
@@ -15,13 +15,13 @@ function PropertySlot({ name, url }: Props) {
         if (data.flavor_text_entries) {
           setPropertyDetail(
             data.flavor_text_entries.find(
-              (entry: FlavorTextEntries) => entry.language.name === "en"
+              (entry: FlavorTextEntry) => entry.language.name === "en"
             ).flavor_text
           );
         } else if (data.effect_entries) {
           setPropertyDetail(
             data.effect_entries.find(
-              (entry: FlavorTextEntries) => entry.language.name === "en"
+              (entry: FlavorTextEntry) => entry.language.name === "en"
             ).effect
           );
         }

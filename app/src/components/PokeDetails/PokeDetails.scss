@@ -19,10 +19,9 @@
     font-size: 2.5em;
     margin-bottom: 20px;
     color: $background-color-secondary;
-    // text-shadow: 2px 2px $background-color-primary; // Looks W E I R D, so I'll check later if it's worth it
     font-family: "Verdana", sans-serif;
-    text-transform: uppercase; // Makes the title all caps
-    letter-spacing: 3rem; // Adds some space between the letters
+    text-transform: uppercase;
+    letter-spacing: 3rem;
     background-color: $background-color-tertiary;
 
     width: 100%;

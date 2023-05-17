@@ -1,6 +1,6 @@
 import PokeTypesItem from "src/components/PokeDetails/PokeTypes/PokeTypesItem/PokeTypesItem";
 import "src/components/PokeDetails/PokeTypes/PokeTypes.scss";
-import { Types } from "src/interfaces/PokeDetailsInterfaces";
+import { Type } from "src/interfaces/PokeDetailsInterfaces";
 
 const types = [
   "normal",
@@ -24,11 +24,11 @@ const types = [
 ];
 
 interface PokemonTypeMatrixProps {
-  activeTypes: Types[];
+  activeTypes: Type[];
 }
 
 function PokeTypes({ activeTypes }: PokemonTypeMatrixProps) {
-  const availableTypes = activeTypes.map((type: Types) => {
+  const availableTypes = activeTypes.map((type: Type) => {
     return type.type.name;
   });
 

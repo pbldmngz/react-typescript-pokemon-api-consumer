@@ -12,10 +12,6 @@ function usePokeDetails(name: string) {
       .then((data) => setPokemonDetail(data));
   }, [name]);
 
-  useEffect(() => {
-    console.log(pokemonDetail);
-  }, [pokemonDetail]);
-
   return [pokemonDetail];
 }
 

@@ -1,6 +1,12 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import { PokemonContext } from "src/components/PokeList/PokeListContext/PokeListContext";
 import { PokemonListItem } from "src/interfaces/PokeListInterfaces";
+import {
+  ITEMS_PER_PAGE,
+  LAST_PAGE_DEFAULT_VALUE,
+  OFFSET_CHANGE,
+  FIRST_PAGE,
+} from "src/constants.json";
 
 function usePokeList() {
   const {
@@ -11,20 +17,20 @@ function usePokeList() {
     imageCache,
     setImageCache,
   } = useContext(PokemonContext);
-  const [lastPage, setLastPage] = useState(-1);
+
+  const [lastPage, setLastPage] = useState(LAST_PAGE_DEFAULT_VALUE);
   const isFetching = useRef(false);
-  const LIMIT = 21;
 
   const fetchData = async (pageOffset: number, isNextPage = false) => {
-    if (lastPage !== -1 && pageOffset > lastPage) return;
+    if (lastPage !== LAST_PAGE_DEFAULT_VALUE && pageOffset > lastPage) return;
     if (isFetching.current) return;
     isFetching.current = true;
 
     try {
       const response = await fetch(
         `https://pokeapi.co/api/v2/pokemon?offset=${
-          pageOffset * LIMIT
-        }&limit=${LIMIT}`
+          pageOffset * ITEMS_PER_PAGE
+        }&limit=${ITEMS_PER_PAGE}`
       );
       const data = await response.json();
       isFetching.current = false;
@@ -64,18 +70,21 @@ function usePokeList() {
       fetchData(offset);
     }
 
-    if (!pokemonList[offset + 1] || pokemonList[offset + 1].length === 0) {
-      fetchData(offset + 1, true);
+    if (
+      !pokemonList[offset + OFFSET_CHANGE] ||
+      pokemonList[offset + OFFSET_CHANGE].length === 0
+    ) {
+      fetchData(offset + OFFSET_CHANGE, true);
     }
   }, [offset]);
 
   const handleNext = () => {
-    setOffset((prevOffset) => prevOffset + 1);
+    setOffset((prevOffset) => prevOffset + OFFSET_CHANGE);
   };
 
   const handlePrevious = () => {
-    if (offset >= 1) {
-      setOffset((prevOffset) => prevOffset - 1);
+    if (offset >= FIRST_PAGE) {
+      setOffset((prevOffset) => prevOffset - OFFSET_CHANGE);
     }
   };
 

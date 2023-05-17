@@ -8,10 +8,10 @@ export interface PokemonDetailProps {
       };
     };
   };
-  stats: Stats[];
-  abilities: Abilities[];
+  stats: Stat[];
+  abilities: Ability[];
   moves: Move[];
-  types: Types[];
+  types: Type[];
 }
 
 export interface RouteParams {
@@ -19,7 +19,7 @@ export interface RouteParams {
   name: string;
 }
 
-export interface Stats {
+export interface Stat {
   base_stat: number;
   effort?: number;
   stat: {
@@ -28,7 +28,7 @@ export interface Stats {
   };
 }
 
-export interface Abilities {
+export interface Ability {
   ability: {
     name: string;
     url: string;
@@ -37,7 +37,7 @@ export interface Abilities {
   slot: number;
 }
 
-export interface FlavorTextEntries {
+export interface FlavorTextEntry {
   flavor_text: string;
   language: {
     name: string;
@@ -69,7 +69,7 @@ export interface VersionGroupDetails {
   };
 }
 
-export interface Types {
+export interface Type {
   slot: number;
   type: {
     name: string;

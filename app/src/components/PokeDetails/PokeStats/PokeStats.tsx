@@ -1,8 +1,8 @@
-import { Stats } from "src/interfaces/PokeDetailsInterfaces";
+import { Stat } from "src/interfaces/PokeDetailsInterfaces";
 import "src/components/PokeDetails/PokeStats/PokeStats.scss";
 import { toTitleCase } from "src/functions/TextOperations";
 
-type Props = { stats: Stats[] };
+type Props = { stats: Stat[] };
 
 function PokeStats({ stats }: Props) {
   return (
